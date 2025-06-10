@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nosso Amor ✨</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header, .story, .gallery, footer {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    header { animation-delay: 0.2s; }
+    .story:first-of-type { animation-delay: 0.4s; }
+    .story:last-of-type { animation-delay: 0.6s; }
+    .gallery { animation-delay: 0.8s; }
+    footer { animation-delay: 1s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      background-color: #fce4ec;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #d81b60;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .story {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.8;
+      font-size: 1.1em;
+      background-color: #fff0f6;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f8bbd0;
+      color: #880e4f;
+      font-size: 1em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 24px;
+      animation: floatHearts 10s linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(110vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Emojis caindo 💔 -->
+  <div class="hearts">
+    <div class="heart" style="left: 5%; animation-delay: 0s;">💔</div>
+    <div class="heart" style="left: 15%; animation-delay: 2s;">💔</div>
+    <div class="heart" style="left: 30%; animation-delay: 4s;">💔</div>
+    <div class="heart" style="left: 50%; animation-delay: 1s;">💔</div>
+    <div class="heart" style="left: 70%; animation-delay: 3s;">💔</div>
+    <div class="heart" style="left: 90%; animation-delay: 5s;">💔</div>
+  </div>
+
+  <header>
+    <h1>✨ Obrigado!!! ✨</h1>
+    <p>Sempre vou ser grato por me amar :)</p>
+  </header>
+
+  <!-- Botões da música -->
+  <div style="text-align: center; margin-top: 20px;">
+    <audio id="bg-music" loop>
+      <source src="my.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio HTML.
+    </audio>
+
+    <button onclick="document.getElementById('bg-music').play()" style="padding: 10px 18px; margin: 5px; font-size: 1em; background-color: rgba(255, 255, 255, 0.6); color: #d81b60; border: 1px solid #f8bbd0; border-radius: 12px; cursor: pointer; backdrop-filter: blur(5px); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: background 0.3s;">
+      ✨ Tocar música
+    </button>
+    <button onclick="document.getElementById('bg-music').pause()" style="padding: 10px 18px; margin: 5px; font-size: 1em; background-color: rgba(255, 255, 255, 0.6); color: #d81b60; border: 1px solid #f8bbd0; border-radius: 12px; cursor: pointer; backdrop-filter: blur(5px); box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: background 0.3s;">
+      ⏸️ Pausar música
+    </button>
+  </div>
+
+  <!-- Texto da história -->
+  <div class="story">
+    <p>Bom, quero começar agradecendo a você por tudo o que fez por mim.<br>
+    Você sempre foi diferente, desde a primeira vez em que te vi.<br>
+    Nada foi igual depois daquilo. Eu sempre te amei desde o primeiro olhar.</p>
+
+    <p>Você sempre se mostrou diferente dos demais e nunca se deixou levar pelo que os outros diziam sobre você.<br>
+    Mesmo sendo, às vezes, uma pessoa difícil de lidar, você tem suas convicções e nunca deixou de ser você mesma — e eu admiro isso em você.</p>
+
+    <p>Por mais que você sofra com o que as pessoas fazem ou dizem, nunca mudou sua essência.<br>
+    E isso faz com que eu me apaixone por você ainda mais.</p>
+
+    <p>Eu sempre quis te mostrar e te agradecer da melhor forma, porque você nunca foi desleal comigo.<br>
+    Você sempre me amou de verdade, foi verdadeira e se entregou de coração.<br>
+    Você fez por onde me amar, e eu quero fazer isso por você também.</p>
+
+    <p>Espero que você me permita te amar para sempre.</p>
+
+    <p>Ver essas fotos suas da infância é muito engraçado, porque parece que eu te conheço desde aquela época.<br>
+    E eu quero que esse sentimento que eu tenho por você seja eterno.</p>
+
+    <p>Espero que você me ame para sempre — pelo menos tanto quanto eu te amo.</p>
+
+    <p>Essa é a única forma que encontrei de me expressar pra você.<br>
+    Porque, pra mim, isso aqui foi o maior ato de amor que já fiz por alguém.</p>
+
+    <p>Você pode crescer, pode se tornar a princesa que demonstra ser…<br>
+    Mas, pra mim, você sempre vai ser a minha moleca.</p>
+
+    <p>E é isso que eu mais amo em você: a sua essência. ✨</p>
+  </div>
+
+  <!-- Galeria de fotos -->
+  <div class="gallery">
+    <img src="2.jpeg" alt="Foto 1">
+    <img src="3.jpeg" alt="Foto 2">
+    <img src="4.jpeg" alt="Foto 3">
+    <img src="6.jpeg" alt="Foto 4">
+    <img src="8.jpeg" alt="Foto 5">
+    <img src="9.jpeg" alt="Foto 6">
+    <img src="15.jpeg" alt="Foto 7">
+    <img src="13.jpeg" alt="Foto 8">
+    <img src="16.jpeg" alt="Foto 9">
+    <img src="7.jpeg" alt="Foto 10">
+  </div>
+
+  <footer>
+    Com amor, para sempre ao seu lado 💕
+  </footer>
+
+</body>
+</html>
